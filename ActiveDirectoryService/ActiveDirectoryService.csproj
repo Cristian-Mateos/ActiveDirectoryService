@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<!-- .NET Framework 4.8.1 to match GoogleService; both DLLs are consumed by the same IIS app. -->
+	<TargetFramework>net481</TargetFramework>
+	<LangVersion>latest</LangVersion>
+	<Nullable>enable</Nullable>
+	<ImplicitUsings>disable</ImplicitUsings>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<RootNamespace>ActiveDirectoryService</RootNamespace>
+	<AssemblyName>ActiveDirectoryService</AssemblyName>
+	<Description>Reusable library for managing on-premises Active Directory (users, groups, membership, account state, password resets). On-prem counterpart to GoogleService.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<!-- SDS.AM: everyday user/group/membership operations (PrincipalContext, UserPrincipal, GroupPrincipal). -->
+	<Reference Include="System.DirectoryServices.AccountManagement" />
+	<!-- SDS.P: lower-level LDAPS / signing+sealing, paged searches, async transport control. -->
+	<Reference Include="System.DirectoryServices.Protocols" />
+	<!-- Core directory services used by SDS.AM. -->
+	<Reference Include="System.DirectoryServices" />
+  </ItemGroup>
+
+</Project>

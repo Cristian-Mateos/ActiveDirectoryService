@@ -1,0 +1,34 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.pdb
+*.user
+
+# Visual Studio cruft
+.vs/
+*.suo
+*.userprefs
+*.cache
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Test / coverage results
+[Tt]est[Rr]esults/
+*.trx
+*.coverage
+
+# Secrets & credential material — NEVER commit these
+*.pfx
+*.p12
+*.key
+*.pem
+secrets.json
+appsettings.*.secrets.json
+*.secret
+*.secrets
